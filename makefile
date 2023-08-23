@@ -40,7 +40,28 @@ c:
 	@echo "C...Setup"
 	@echo "Installing vs code extensions..."
 	@echo "Setting up lecture directory"
-	
+
+
+WebApps: 
+	@echo "WebApps...Setup"
+	@echo "Installing vs code extensions..."
+	@echo "Cleaning initial directories..."
+	rm -rf LECTURE
+	rm -rf STUDY
+	rm -rf PROJECTS
+	rm -rf ASSIGNMENTS
+	rm -rf REFERENCE
+	@echo "Creating initial directories..."
+	mkdir REACT
+	mkdir BASICS
+	mkdir NODEJS
+	mkdir UIUX
+	touch notes.md
+	@echo "Setting up BASICS directory"
+	cd BASICS && mkdir html && mkdir css && mkdir javascript
+	cd BASICS && touch html/index.html && touch css/style.css && touch javascript/script.js
+	@echo "Setting up NODEJS directory"
+	cd NODEJS && mkdir nodejs
 clean:
 	@echo "Cleaning..."
 	rm -rf LECTURE
@@ -48,3 +69,8 @@ clean:
 	rm -rf PROJECTS
 	rm -rf ASSIGNMENTS
 	rm -rf REFERENCE
+	rm -rf BASICS
+	rm -rf NODEJS
+	rm -rf UIUX
+	rm -rf notes.md
+	rm -rf REACT
